@@ -1,0 +1,9 @@
+#calcContainer {
+    margin: auto;
+    margin: 5em 5em 5em 5em;
+}
+#display {
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+}
