@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calculator</title>
     <link rel="stylesheet" href="../calculator/style.css">
-
+    <title>Calculator</title>
 </head>
 
 <body>
+    <div id="calcContainer">
+        <div id="display"></div>
+        <div id="bClr">
+            <button id="backspace" class="cBtn xtra">backspace</button>
+            <button id="clear" class="cBtn notNum xtra">clear</button>
+        </div>
+        <div id="numContainer">
+            <button id="num1" class="cBtn num" onclick="">1</button>
+            <button id="num2" class="cBtn num" onclick="">2</button>
+            <button id="num3" class="cBtn num" onclick="">3</button>
+            <button id="divide" class="cBtn notNum operator">/</button>
+            <button id="num4" class="cBtn num" onclick="">4</button>
+            <button id="num5" class="cBtn num" onclick="">5</button>
+            <button id="num6" class="cBtn num" onclick="">6</button>
+            <button id="multiply" class="cBtn notNum operator">X</button>
+            <button id="num7" class="cBtn num" onclick="">7</button>
+            <button id="num8" class="cBtn num" onclick="">8</button>
+            <button id="num9" class="cBtn num" onclick="">9</button>
+            <button id="add" class="cBtn notNum operator">+</button>
+            <button id="num0" class="cBtn num" onclick="">0</button>
+            <button id="decimal" class="cBtn">.</button>
+            <button id="equal" class="cBtn notNum">=</button>
+            <button id="subtract" class="cBtn notNum operator">-</button>
+        </div>
+    </div>
     <script src="../calculator/main.js"></script>
 </body>
 </html>
