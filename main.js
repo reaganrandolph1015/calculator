@@ -1,4 +1,4 @@
-// delcarations
+// declarations
 const display = document.getElementById('display');
 const display2 = document.getElementById('display2');
 let num1 = undefined;
@@ -89,10 +89,10 @@ function migrateDisplay(operator) {
     display2.textContent = display.textContent + operator;
 }
 
-// button functions
+// button event listeners
 const backspace = document.getElementById('backspace');
 backspace.addEventListener('click', function () {
-    if(opPerformed === false) {
+    if (opPerformed === false) {
         display.innerText = display.innerText.slice(0, -1)
     };
 });
