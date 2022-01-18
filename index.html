@@ -11,27 +11,36 @@
     <div id="calcContainer">
         <div id="display2"></div>
         <div id="display">placeholder</div>
-        <div id="bClr">
-            <button id="backspace" class="cBtn xtra">backspace</button>
-            <button id="clear" class="cBtn notNum xtra">clear</button>
-        </div>
-        <div id="numContainer">
-            <button id="numb1" class="cBtn num" onclick="updateDisplay(1)">1</button>
-            <button id="numb2" class="cBtn num" onclick="updateDisplay(2)">2</button>
-            <button id="numb3" class="cBtn num" onclick="updateDisplay(3)">3</button>
-            <button id="divide" class="cBtn notNum operator">/</button>
-            <button id="numb4" class="cBtn num" onclick="updateDisplay(4)">4</button>
-            <button id="numb5" class="cBtn num" onclick="updateDisplay(5)">5</button>
-            <button id="numb6" class="cBtn num" onclick="updateDisplay(6)">6</button>
-            <button id="multiply" class="cBtn notNum operator">X</button>
-            <button id="numb7" class="cBtn num" onclick="updateDisplay(7)">7</button>
-            <button id="numb8" class="cBtn num" onclick="updateDisplay(8)">8</button>
-            <button id="numb9" class="cBtn num" onclick="updateDisplay(9)">9</button>
-            <button id="add" class="cBtn notNum operator">+</button>
-            <button id="numb0" class="cBtn num" onclick="updateDisplay(0)">0</button>
-            <button id="decimal" class="cBtn">.</button>
-            <button id="equal" class="cBtn notNum">=</button>
-            <button id="subtract" class="cBtn notNum operator">-</button>
+        
+            <div id="bClr">
+                <button id="backspace" class="cBtn xtra">backspace</button>
+                <button id="clear" class="cBtn notNum xtra">clear</button>
+            </div>
+            <div id="buttContainer">
+            <div id="buttSec1">
+                <button id="numb1" class="cBtn num" onclick="updateDisplay(1)">1</button>
+                <button id="numb2" class="cBtn num" onclick="updateDisplay(2)">2</button>
+                <button id="numb3" class="cBtn num" onclick="updateDisplay(3)">3</button>
+                <button id="divide" class="cBtn notNum operator">/</button>
+            </div>
+            <div id="buttSec2">
+                <button id="numb4" class="cBtn num" onclick="updateDisplay(4)">4</button>
+                <button id="numb5" class="cBtn num" onclick="updateDisplay(5)">5</button>
+                <button id="numb6" class="cBtn num" onclick="updateDisplay(6)">6</button>
+                <button id="multiply" class="cBtn notNum operator">X</button>
+            </div>
+            <div id="buttSec3">
+                <button id="numb7" class="cBtn num" onclick="updateDisplay(7)">7</button>
+                <button id="numb8" class="cBtn num" onclick="updateDisplay(8)">8</button>
+                <button id="numb9" class="cBtn num" onclick="updateDisplay(9)">9</button>
+                <button id="add" class="cBtn notNum operator">+</button>
+            </div>
+            <div id="buttSec4">
+                <button id="numb0" class="cBtn num" onclick="updateDisplay(0)">0</button>
+                <button id="decimal" class="cBtn">.</button>
+                <button id="subtract" class="cBtn notNum operator">-</button>
+                <button id="equal" class="cBtn notNum">=</button>  
+            </div>
         </div>
     </div>
     <script src="../calculator/main.js"></script>
