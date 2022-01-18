@@ -30,7 +30,7 @@ function operate(operator, num1, num2) {
 }
 
 // display functions
-function updateDisplay(value) {
+function updateDisplay(value) {         // function for numbers buttons
     if (displayInitialized === false) {
         display.innerText = value;
     } else {
@@ -84,16 +84,59 @@ function opEquals() {
         }
     }
 }
-/*
+
 function migrateDisplay(operator) {
     display2.textContent = display.textContent + operator;
 }
-*/
-// button functions
 
+// button functions
 const backspace = document.getElementById('backspace');
 backspace.addEventListener('click', function () {
     if(opPerformed === false) {
         display.innerText = display.innerText.slice(0, -1)
     };
-})
+});
+
+const decimal = document.getElementById('decimal');
+decimal.addEventListener('click', function() {
+    if (display.textContent.includes('.') === false) {
+        updateDisplay('.')
+    };
+});
+
+const equal = document.getElementById('equal');
+equal.addEventListener('click', function() {
+    if(isNaN(num1) === false && isNaN(num2) === true) {
+        equals(); 
+    };
+});
+
+const adds = document.getElementById('add');
+adds.addEventListener('click', function() {
+    if (num1 === undefined) {
+        num1 = parseFloat(display.innerText)
+        operator = add;
+        migrateDisplay('+');
+        clear();
+    } else if (isNaN(num1) === false && isNaN(num2) === true) {
+        opEquals();
+        operator = add;
+        migrateDisplay('+');
+        clear();
+    };
+});
+
+const subs = document.getElementById('subtract');
+subs.addEventListener('click', function() {
+    if (num1 === undefined) {
+        num1 = parseFloat(display.innerText)
+        operator = subtract;
+        migrateDisplay('-');
+        clear();
+    } else if (isNaN(num1) === false && isNaN(num2) === true) {
+        opEquals();
+        operator = subtract;
+        migrateDisplay('-');
+        clear();
+    };
+});
