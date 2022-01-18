@@ -7,3 +7,37 @@
     display: flex;
     justify-content: center;
 }
+
+#bClr {
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: 1em;
+    margin-right: 10em;
+}
+
+#buttContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#buttSec1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#buttSec2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#buttSec3 {
+    display: flex;
+    flex-direction: row;
+}
+
+#buttSec4 {
+    display: flex;
+    flex-direction: row;
+    order: -1;
+}
