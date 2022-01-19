@@ -6,7 +6,8 @@ let num2 = undefined;
 let equalsPressed = false;
 let displayInitialized = false;
 let opPerformed = false;
-display.innerText = '0';
+display.innerText = '';
+display2.innerText = '0'
 
 // operator functions
 function add(a, b) {
@@ -18,7 +19,7 @@ function subtract(a, b) {
 }
 
 function multiply(a, b) {
-    return a / b;
+    return a * b;
 }
 
 function divide(a, b) {
@@ -46,7 +47,8 @@ function clear() {
 }
 
 function trueClear() {
-    display.innerText = '0';
+    display2.innerText = '0';
+    display.innerText = '';
     num1 = undefined;
     num2 = undefined;
     operator = undefined;
@@ -60,7 +62,7 @@ function equals() {
         num2 = parseFloat(display.innerText);
         migrateDisplay('');
         num1 = operate(operator, num1, num2);
-        display.innerText = num1;
+        display2.innerText = num1;
         if (num1 === Infinity) {
             alert("Error!");
             trueClear();
@@ -116,12 +118,12 @@ adds.addEventListener('click', function() {
     if (num1 === undefined) {
         num1 = parseFloat(display.innerText)
         operator = add;
-        migrateDisplay('+');
+        migrateDisplay(' + ');
         clear();
     } else if (isNaN(num1) === false && isNaN(num2) === true) {
         opEquals();
         operator = add;
-        migrateDisplay('+');
+        migrateDisplay(' + ');
         clear();
     };
 });
@@ -131,12 +133,47 @@ subs.addEventListener('click', function() {
     if (num1 === undefined) {
         num1 = parseFloat(display.innerText)
         operator = subtract;
-        migrateDisplay('-');
+        migrateDisplay(' - ');
         clear();
     } else if (isNaN(num1) === false && isNaN(num2) === true) {
         opEquals();
         operator = subtract;
-        migrateDisplay('-');
+        migrateDisplay(' - ');
         clear();
     };
 });
+
+const divides = document.getElementById('divide');
+divides.addEventListener('click', function() {
+    if (num1 === undefined) {
+        num1 = parseFloat(display.innerText)
+        operator = divide;
+        migrateDisplay(' / ');
+        clear();
+    } else if (isNaN(num1) === false && isNaN(num2) === true) {
+        opEquals();
+        operator = divide;
+        migrateDisplay(' / ');
+        clear();
+    }
+})
+
+const multiplies = document.getElementById('multiply');
+multiplies.addEventListener('click', function() {
+    if (num1 === undefined) {
+        num1 = parseFloat(display.innerText)
+        operator = multiply;
+        migrateDisplay(' × ');
+        clear();
+    } else if (isNaN(num1) === false && isNaN(num2) === true) {
+        opEquals();
+        operator = multiply;
+        migrateDisplay(' × ');
+        clear();
+    }
+})
+
+const clears = document.getElementById('clear');
+clears.addEventListener('click', function() {
+    trueClear();
+})
