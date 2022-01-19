@@ -2,10 +2,27 @@
     margin: auto;
     margin: 5em 5em 5em 5em;
 }
+
+#display2 {
+    margin-bottom: 1em;
+    margin-right: 8em;
+    margin-left: 8em;
+    min-height: 2em;
+    border: 2px solid black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;   
+}
 #display {
+    margin-top: 1em;
     margin-bottom: 2em;
+    margin-right: 10em;
+    margin-left: 10em;
+    min-height: 2em;
+    border: 2px solid black;
     display: flex;
     justify-content: center;
+    
 }
 
 #bClr {
